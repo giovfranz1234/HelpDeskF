@@ -1,14 +1,34 @@
-<h1>{{titulo}}
+
+  <div class="card bg-light mb-3">
+    <div class="card-header">{{titulo}}</div>
+      <div class="card-body">
+        <button class="btn btn-primary my-2" routerLink="/usuarios/form">Crear Usuario</button>
   <table class ="table table-hover table-striped">
     <thead>
       <tr>
-         <th>nombre</th>
+         <th>Nombres</th>
+         <th>Apellido Paterno</th>
+         <th>Apellido Materno</th>
+         <th>CI</th>
+         <th>Correo</th>
+         <th>Telefono</th>
+         <th>Tipo Usuario</th>
+         <th>Estado</th>
+         
       </tr>
 
     </thead>
     <tbody>
       <tr *ngFor="let usuario of usuarios">
         <td>{{usuario.nombres}}</td>
+        <td>{{usuario.paterno}}</td>
+        <td>{{usuario.materno}}</td>
+        <td>{{usuario.docIdentidad}}</td>
+        <td>{{usuario.correoElectronico}}</td>
+        <td>{{usuario.rol}}</td>
+        <td>{{usuario.estado}}</td> 
       </tr>
     </tbody>
   </table>
+</div>
+</div>

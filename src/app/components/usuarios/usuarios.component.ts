@@ -8,7 +8,7 @@ import {Usuario} from "../../models/usuario";
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit{
-    titulo ='listado de usuarios';
+    titulo ='Listado de Usuarios';
     usuarios: Usuario[]=[];
     constructor(private service:UsuarioService) {
 
