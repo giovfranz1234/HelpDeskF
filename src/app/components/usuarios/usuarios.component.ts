@@ -17,7 +17,14 @@ export class UsuariosComponent implements OnInit{
       this.service.listarus().subscribe(usuarios =>  this.usuarios = usuarios);
 
       console.log(this.usuarios);
-     
+    }
+    public eliminar(usuario:Usuario):void{
+      if(confirm(`seguro que desea eliminar el usuario?`))
+      this.service.eliminar(usuario.id).subscribe(()=> {
+    this.usuarios= this.usuarios.filter(a=>a!==usuario);
+    alert(`Usuario eliminado `)
+    })
+
 
     }
 }

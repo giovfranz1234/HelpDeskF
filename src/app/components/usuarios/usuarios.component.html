@@ -15,7 +15,7 @@
          <th>Tipo Usuario</th>
          <th>Estado</th>
          <th>Editar</th>
-         
+         <th>Eliminar</th>
       </tr>
 
     </thead>
@@ -28,8 +28,9 @@
         <td>{{usuario.correoElectronico}}</td>
         <td>{{usuario.telefono}}</td>
         <td>{{usuario.rol}}</td>
-        <td>{{usuario.estado}}</td> 
+        <td>{{usuario.estado}}</td>
         <td><button class="btn btn-secondary btn-sm" [routerLink]="['/usuarios/form',usuario.id]">Editar</button></td>
+        <td><button class="btn btn-danger btn-sm" (click)="eliminar(usuario)">Eliminar</button></td>
       </tr>
     </tbody>
   </table>
