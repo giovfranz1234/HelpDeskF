@@ -23,5 +23,12 @@ export class UsuarioService {
     return this.http.get<Usuario>(`${this.baseEndpoint}/${id}`);
   }
   
+  public editar(usuario:Usuario): Observable<Usuario>{
+    console.log('caebcera==========>', this.cabecera);
 
+    return this.http.put<Usuario>(`${this.baseEndpoint}/${usuario.id}`,usuario,{headers:this.cabecera});
+  }
+  public eliminar(id:number): Observable<void>{
+    return this.http.delete<void>(`${this.baseEndpoint}/${id}`);
+  }
 }

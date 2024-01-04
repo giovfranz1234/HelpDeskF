@@ -19,11 +19,11 @@ export class UsuariosFormComponent implements OnInit{
   }
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      const idString: string  | null = params.get('id')
+      const idString: string  | null = params.get('id');
       if(idString!==null){
         const id:number = +idString
          
-      if(!isNaN(id)){
+      if(id){
         this.service.ver(id).subscribe(usuario=> this.usuario =usuario)
       }
     }
@@ -32,16 +32,18 @@ export class UsuariosFormComponent implements OnInit{
   public crear():void{
     this.service.crear(this.usuario).subscribe(usuario => {
       console.log(usuario);
-      alert ('Usuario $(usuario.nombres) $(usuario.paterno) creado correctamente');
+      alert (`Usuario $(usuario.nombres) $(usuario.paterno) creado correctamente`);
       this.router.navigate(['/usuarios'])
       });
   }
-  /*public editar():void{
+  public editar():void{
+    this.usuario.estado ='AC';
+   
     this.service.editar(this.usuario).subscribe(usuario => {
-      console.log(usuario);
-      alert ('Usuario $(usuario.nombres) $(usuario.paterno) actualizado correctamente');
+      console.log('asdasdasdasdasdasdasdasd====================>',usuario);
+      alert (`Usuario $(usuario.nombres) $(usuario.paterno) actualizado correctamente`);
       this.router.navigate(['/usuarios'])
       });
-  }*/
+  }
 }
 
