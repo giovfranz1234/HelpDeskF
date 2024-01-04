@@ -1,23 +1,26 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-interface Food {
-  value: string;
-  viewValue: string;
+import { FormControl, Validators } from '@angular/forms';
+
+interface User {
+  rol: string;
+  
 }
+
 @Component({
-  selector: 'app.combo',
+  selector: 'app-combo',
   templateUrl: './combo.component.html',
-  standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule],
+  styleUrls: ['./combo.component.css'],
 })
 export class ComboComponent {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+  userControl = new FormControl<User | null>(null, Validators.required);
+  users: User[] = [
+    { rol: 'Administrador'},
+    { rol: 'Tecnico'},
+    { rol: 'Funcionario' },
+    
   ];
 }
+
+
+
 

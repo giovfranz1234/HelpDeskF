@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: '',pathMatch: 'full', redirectTo:'usuarios'},
   {path: 'usuarios',component: UsuariosComponent},
   {path: 'usuarios/form',component: UsuariosFormComponent},
+  {path: 'usuarios/form:id',component: UsuariosFormComponent},
   {path: 'tickets',component: TicketsComponent},
   {path: 'equipos',component: EquiposComponent},
   {path: 'combo',component: ComboComponent}

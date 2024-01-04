@@ -1,36 +1,69 @@
 <div class="card bg-light mb-3">
     <div class="card-header">{{titulo}}</div>
-      <div class="card-body">
-        <button class="btn btn-primary my-2" routerLink="/usuarios">volver</button>
-<form >
-    <div class="form-group">
-        <label for="nombres">Nombres</label>
-        <input type="text" name="nombres" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="paterno">Apellido Paterno</label>
-        <input type="text" name="materno" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="materno">Apellido Materno</label>
-        <input type="text" name="paterno" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="correoElectronico">Email</label>
-        <input type="text" name="correoElectronico" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="docIdentidad">Documento de Identidad</label>
-        <input type="text" name="docIdentidad" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="telefono">Numero de Telefono</label>
-        <input type="text" name="telefono" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="docIdentidad">Documento de Identidad</label>
-        <input type="" name="docIdentidad" class="form-control">
-    </div>
-</form>
+    <div class="card-body">
+        <button class="btn btn-secondary my-2" routerLink="/usuarios">volver</button>
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" name="nombres" class="form-control"
+                        [(ngModel)]="usuario.nombres">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="paterno">Apellido Paterno</label>
+                        <input type="text" name="materno" class="form-control"[(ngModel)]="usuario.paterno">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="materno">Apellido Materno</label>
+                        <input type="text" name="paterno" class="form-control" [(ngModel)]="usuario.materno">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="correoElectronico">Email</label>
+                        <input type="text" name="correoElectronico" class="form-control" [(ngModel)]="usuario.correoElectronico">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="docIdentidad">Documento de Identidad</label>
+                        <input type="text" name="docIdentidad" class="form-control" [(ngModel)]="usuario.docIdentidad">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="telefono">Numero de Telefono</label>
+                        <input type="text" name="telefono" class="form-control" [(ngModel)]="usuario.telefono">
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <app-combo></app-combo>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                       
+                <button type ="button"  class="btn btn-primary" (click)="crear()">Guardar</button>
+            </div>
+        </form>
     </div>
 </div>

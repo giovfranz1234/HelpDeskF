@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-usuarios-form',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosFormComponent implements OnInit{
   titulo ='Crear Usuario';
-
-  ngOnInit() {
+  usuario : Usuario = new Usuario();
+  
+  
+  constructor(private service: UsuarioService, private router:Router, private route:ActivatedRoute){
+   
 
   }
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const idString: string  | null = params.get('id')
+      if(idString!==null){
+        const id:number = +idString
+         
+      if(!isNaN(id)){
+        this.service.ver(id).subscribe(usuario=> this.usuario =usuario)
+      }
+    }
+    })
+  }
+  public crear():void{
+    this.service.crear(this.usuario).subscribe(usuario => {
+      console.log(usuario);
+      alert ('Usuario $(usuario.nombres) $(usuario.paterno) creado correctamente');
+      this.router.navigate(['/usuarios'])
+      });
+  }
+  /*public editar():void{
+    this.service.editar(this.usuario).subscribe(usuario => {
+      console.log(usuario);
+      alert ('Usuario $(usuario.nombres) $(usuario.paterno) actualizado correctamente');
+      this.router.navigate(['/usuarios'])
+      });
+  }*/
 }
 

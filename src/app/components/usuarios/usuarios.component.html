@@ -14,6 +14,7 @@
          <th>Telefono</th>
          <th>Tipo Usuario</th>
          <th>Estado</th>
+         <th>Editar</th>
          
       </tr>
 
@@ -25,8 +26,10 @@
         <td>{{usuario.materno}}</td>
         <td>{{usuario.docIdentidad}}</td>
         <td>{{usuario.correoElectronico}}</td>
+        <td>{{usuario.telefono}}</td>
         <td>{{usuario.rol}}</td>
         <td>{{usuario.estado}}</td> 
+        <td><button class="btn btn-primary btn-sm" [routerLink]="['/usuarios/form',usuario.id]">Editar</button></td>
       </tr>
     </tbody>
   </table>
