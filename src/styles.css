@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+    background-image: url("./images/fondo_lapaz.jpg");
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat;
+    height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root{
+    margin-left: 20px;
+}
