@@ -14,6 +14,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,7 +25,8 @@ import { MatInputModule } from '@angular/material/input';
         TicketsComponent,
         EquiposComponent,
         UsuariosFormComponent,
-        ComboComponent
+        ComboComponent,
+        TicketsRegComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -34,7 +39,9 @@ import { MatInputModule } from '@angular/material/input';
         MatSelectModule,
         MatInputModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatStepperModule,
+        MatButtonModule
     ]
 })
 export class AppModule { }

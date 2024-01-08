@@ -6,11 +6,13 @@ import {EquiposComponent} from "./components/equipos/equipos.component";
 import {TicketsComponent} from "./components/tickets/tickets.component";
 import { UsuariosFormComponent } from './components/usuarios/usuarios-form/usuarios-form.component';
 import { ComboComponent } from './components/comun/combo/combo.component';
+import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
 
 const routes: Routes = [
   {path: '',pathMatch: 'full', redirectTo:'usuarios'},
   {path: 'usuarios',component: UsuariosComponent},
   {path: 'usuarios/form',component: UsuariosFormComponent},
+  {path: 'tickets/reg',component: TicketsRegComponent},
   {path: 'usuarios/form/:id',component: UsuariosFormComponent},
   {path: 'tickets',component: TicketsComponent},
   {path: 'equipos',component: EquiposComponent},
