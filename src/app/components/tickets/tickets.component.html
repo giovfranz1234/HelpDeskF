@@ -5,12 +5,10 @@
 <table class ="table table-hover table-striped">
   <thead>
     <tr>
+      <th>Numero de Ticket</th> 
        <th>Descripcion</th>
        <th>Dispositivo</th>
-       <th>Tecnico Asignado</th>
        <th>Prioridad</th>
-       <th>Creado Por</th>
-       <th>Historial</th>
        <th>Fecha de Registro</th>
        <th>Fecha Inicio</th>
        <th>Fecha Fin</th>
@@ -22,18 +20,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let ticket of tickets">
+      <td>{{ticket.id}}</td>
       <td>{{ticket.descripcion}}</td>
       <td>{{ticket.dispositivo}}</td>
-      <td>{{ticket.asignadoa}}</td>
       <td>{{ticket.prioridad}}</td>
-      <td>{{ticket.creadoPor}}</td>
       <td>{{ticket.fechaRegistro}}</td>
       <td>{{ticket.fechaInicio}}</td>
       <td>{{ticket.fechaFin}}</td>
-      <td>{{ticket.Historial}}</td>
       <td>{{ticket.estado}}</td>
       <td><button class="btn btn-secondary btn-sm" [routerLink]="['/usuarios/form',ticket.id]">Editar</button></td>
-      <td><button class="btn btn-danger btn-sm>Eliminar"></button></td>
+      <td><button class="btn btn-danger btn-sm">eliminar</button></td>
     </tr>
   </tbody>
 </table>

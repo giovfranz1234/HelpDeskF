@@ -2,6 +2,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UsuarioService} from "../../services/usuario.service";
 import {Ticket} from "../../models/ticket";
+import { TicketsService } from 'src/app/services/tickets.service';
 
 
 /**
@@ -16,21 +17,21 @@ import {Ticket} from "../../models/ticket";
 export class TicketsComponent implements OnInit{
     titulo ='Listado de Tickets';
     tickets: Ticket[]=[];
-    constructor(private service:UsuarioService) {
+    constructor(private service:TicketsService) {
 
       }
     ngOnInit() {
-    /* this.service.listarus().subscribe(usuarios =>  this.usuarios = usuarios);
+     this.service.listar().subscribe(tickets =>  this.tickets = tickets);
 
-      console.log(this.usuarios);
+      console.log(this.tickets);
     }
-    public eliminar(usuario:Usuario):void{
+   /* public eliminar(ticket:Ticket):void{
       if(confirm(`seguro que desea eliminar el usuario?`))
-      this.service.eliminar(usuario.id).subscribe(()=> {
-    this.usuarios= this.usuarios.filter(a=>a!==usuario);
+      this.service.eliminar(ticket.id).subscribe(()=> {
+    this.tickets= this.tickets.filter(a=>a!==ticket);
     alert(`Usuario eliminado `)
     })*/
 
 
     }
-}
+
