@@ -17,6 +17,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
 import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
+import { HistorialComponent } from './components/historial/historial.component';
+import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +28,9 @@ import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-re
         EquiposComponent,
         UsuariosFormComponent,
         ComboComponent,
-        TicketsRegComponent
+        TicketsRegComponent,
+        HistorialComponent,
+        EquiposRegComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

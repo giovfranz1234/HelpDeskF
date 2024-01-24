@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { Equipo } from 'src/app/models/equipo';
-import { EquipoService } from 'src/app/services/equipo.service';
 
 @Component({
-  selector: 'app-equipos',
-  templateUrl: './equipos.component.html',
-  styleUrls: ['./equipos.component.css']
+  selector: 'app-historial',
+  templateUrl: './historial.component.html',
+  styleUrls: ['./historial.component.css']
 })
-export class EquiposComponent {
-  titulo ='Listado de Equipos';
-  equipos: Equipo[]=[];
-  constructor(private service:EquipoService) {
+export class HistorialComponent {
+/*  titulo ='Historial';
+  historial: Historial[]=[];
+  constructor(private service:HistorialService) {
 
     }
   ngOnInit() {
@@ -26,5 +24,5 @@ export class EquiposComponent {
   })
 
 
-  }
+  }*/
 }

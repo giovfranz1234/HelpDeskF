@@ -1,1 +1,30 @@
-<p>equipos works!</p>
+<div class="card bg-light mb-3">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body">
+      <button class="btn btn-primary my-2" routerLink="/equipos/form">Crear Equipo</button>
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Activo Fijo</th>
+            <th>Tipo Equipo</th>
+            <th>Marca</th>
+            <th>Observaciones</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+  
+        </thead>
+        <tbody>
+          <tr *ngFor="let equipo of equipos">
+            <td>{{equipo.serieActivoFijo}}</td>
+            <td>{{equipo.tipoEquipo}}</td>
+            <td>{{equipo.marca}}</td>
+            <td>{{equipo.Observaciones}}</td>
+            
+            <td><button class="btn btn-secondary btn-sm" [routerLink]="['/equipos/form',equipo.id]">Editar</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)="eliminar(equipo)">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

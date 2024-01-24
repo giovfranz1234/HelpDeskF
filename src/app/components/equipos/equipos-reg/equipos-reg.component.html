@@ -1,0 +1,38 @@
+<div class="card bg-light mb-3">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body">
+        <button class="btn btn-secondary my-2" routerLink="/equipos">volver</button>
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="equipos">Activo Fijo</label>
+                        <input type="text" name="serieActivoFijo" class="form-control"
+                        [(ngModel)]="equipo.serieActivoFijo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="paterno">Apellido Paterno</label>
+                        <input type="text" name="materno" class="form-control"[(ngModel)]="equipo.tipoEquipo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="materno">Apellido Materno</label>
+                        <input type="text" name="paterno" class="form-control" [(ngModel)]="equipo.marca">
+                    </div>
+                </div>
+            </div>
+          
+            <div class="form-group">
+                       
+                <button type ="button"  class="btn btn-primary" (click)="equipo.id? editar(): crear()">{{equipo.id? 'Editar': 'Guardar'}}</button>
+            </div>
+        </form>
+    </div>
+</div>
