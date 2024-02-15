@@ -1,7 +1,7 @@
 <div class="card bg-light mb-3">
     <div class="card-header">{{titulo}}</div>
     <div class="card-body">
-        <button class="btn btn-secondary my-2" routerLink="/equipos">volver</button>
+        <button class="btn btn-secondary my-2" *ngIf="mostrar == true" routerLink="/equipos" >volver</button>
         <form>
             <div class="row">
                 <div class="col-md-4">
@@ -10,7 +10,7 @@
                         <input type="text" name="serieActivoFijo" class="form-control"
                         [(ngModel)]="equipo.serieActivoFijo">
                     </div>
-                </div>
+                </div>w
             </div>
             <div class="row">
                 <div class="col-md-4">

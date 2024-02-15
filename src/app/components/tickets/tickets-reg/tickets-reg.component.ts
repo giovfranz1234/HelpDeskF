@@ -8,4 +8,6 @@ import {Component} from '@angular/core';
   templateUrl: './tickets-reg.component.html',
   styleUrls: ['./tickets-reg.component.css']
 })
-export class TicketsRegComponent {}
+export class TicketsRegComponent {
+  mostrar=false;
+}

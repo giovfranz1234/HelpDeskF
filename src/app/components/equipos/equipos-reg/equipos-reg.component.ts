@@ -11,7 +11,7 @@ import { EquipoService } from 'src/app/services/equipo.service';
 export class EquiposRegComponent implements OnInit{
   titulo ='Registrar Equipo';
   equipo : Equipo = new Equipo();
-
+  mostrar=true;
 
   constructor(private service: EquipoService, private router:Router, private route:ActivatedRoute){
 
@@ -25,6 +25,7 @@ export class EquiposRegComponent implements OnInit{
 
       if(id){
         this.service.ver(id).subscribe(equipo=> this.equipo =equipo)
+        this.mostrar =false;
       }
     }
     })

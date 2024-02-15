@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {HttpClientModule} from '@angular/common/http';
@@ -19,7 +19,25 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 
+function initializeKeycloak(keycloak: KeycloakService) {
+    return () =>
+      keycloak.init({
+        config: {
+          url: 'http://localhost:8080/',
+          realm:'HelpDesk',
+          clientId: 'HelpDesk-client'
+        },
+        initOptions: {
+          onLoad: 'login-required',
+          flow:"standard",
+          silentCheckSsoRedirectUri:
+            window.location.origin + '/assets/silent-check-sso.html'
+        },
+        loadUserProfileAtStartUp:true
+      });
+  }
 @NgModule({
     declarations: [
         AppComponent,
@@ -32,7 +50,12 @@ import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-re
         HistorialComponent,
         EquiposRegComponent
     ],
-    providers: [],
+    providers: [{
+        provide: APP_INITIALIZER,
+        useFactory: initializeKeycloak,
+        multi: true,
+        deps: [KeycloakService]
+      }],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -45,7 +68,8 @@ import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-re
         FormsModule,
         ReactiveFormsModule,
         MatStepperModule,
-        MatButtonModule
+        MatButtonModule,
+        KeycloakAngularModule
     ]
 })
 export class AppModule { }

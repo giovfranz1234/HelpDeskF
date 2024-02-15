@@ -11,9 +11,10 @@ export class EquiposComponent {
   titulo ='Listado de Equipos';
   equipos: Equipo[]=[];
   constructor(private service:EquipoService) {
-
+ 
     }
   ngOnInit() {
+    volver:false
     this.service.listar().subscribe(equipos =>  this.equipos = equipos);
 
     console.log(this.equipos);
