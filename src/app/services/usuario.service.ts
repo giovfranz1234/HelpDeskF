@@ -8,7 +8,7 @@ import {Usuario} from "../models/usuario";
 })
 export class UsuarioService {
 
-  private baseEndpoint='http://localhost:8090/HelpDesk/usuarios';
+  private baseEndpoint='http://localhost:8090/usuarios';
 
   private cabecera: HttpHeaders= new HttpHeaders({'Content-Type':'Application/json'})
   constructor(private http:HttpClient) { this.http=http }

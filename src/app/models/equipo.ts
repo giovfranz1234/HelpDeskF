@@ -4,7 +4,9 @@ export class Equipo {
     serieActivoFijo: string="";
     tipoEquipo:  string="";
     marca: string="";
-    Observaciones: string="";
+    propietario: string="";
+    unidadOrg: string="";
+    observaciones: string="";
           
     constructor(){}
 }

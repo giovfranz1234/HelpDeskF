@@ -6,8 +6,10 @@
   <thead>
     <tr>
       <th>Numero de Ticket</th> 
+      <th>Registrado por</th> 
        <th>Descripcion</th>
        <th>Dispositivo</th>
+       <th>Asignado a</th>
        <th>Prioridad</th>
        <th>Fecha de Registro</th>
        <th>Fecha Inicio</th>
@@ -21,14 +23,16 @@
   <tbody>
     <tr *ngFor="let ticket of tickets">
       <td>{{ticket.id}}</td>
+      <td>{{ticket.creadoPor}}</td>
       <td>{{ticket.descripcion}}</td>
       <td>{{ticket.dispositivo}}</td>
+      <td>{{ticket.asignadoa}}</td>
       <td>{{ticket.prioridad}}</td>
       <td>{{ticket.fechaRegistro}}</td>
       <td>{{ticket.fechaInicio}}</td>
       <td>{{ticket.fechaFin}}</td>
       <td>{{ticket.estado}}</td>
-      <td><button class="btn btn-secondary btn-sm" [routerLink]="['/usuarios/form',ticket.id]">Editar</button></td>
+      <td><button class="btn btn-secondary btn-sm" [routerLink]="['/tickets/reg',ticket.id]">Editar</button></td>
       <td><button class="btn btn-danger btn-sm">eliminar</button></td>
     </tr>
   </tbody>

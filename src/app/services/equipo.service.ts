@@ -7,7 +7,7 @@ import { Equipo } from '../models/equipo';
   providedIn: 'root'
 })
 export class EquipoService {
-  private baseEndpoint='http://localhost:8090/HelpDesk/equipos';
+  private baseEndpoint='http://localhost:8090/equipos';
 
   private cabecera: HttpHeaders= new HttpHeaders({'Content-Type':'Application/json'})
   constructor(private http:HttpClient) { this.http=http }

@@ -9,5 +9,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./tickets-reg.component.css']
 })
 export class TicketsRegComponent {
-  mostrar=false;
+  mostrar: boolean ;
+  constructor(){
+    this.mostrar = false;
+  }
 }

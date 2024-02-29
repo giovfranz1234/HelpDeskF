@@ -21,7 +21,7 @@ import { HistorialComponent } from './components/historial/historial.component';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 
-function initializeKeycloak(keycloak: KeycloakService) {
+/*function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
       keycloak.init({
         config: {
@@ -37,7 +37,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
         },
         loadUserProfileAtStartUp:true
       });
-  }
+  }*/
 @NgModule({
     declarations: [
         AppComponent,
@@ -50,12 +50,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
         HistorialComponent,
         EquiposRegComponent
     ],
-    providers: [{
-        provide: APP_INITIALIZER,
+    providers: [/*{
+        /*provide: APP_INITIALIZER,
         useFactory: initializeKeycloak,
         multi: true,
         deps: [KeycloakService]
-      }],
+      }*/],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,

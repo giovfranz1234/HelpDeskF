@@ -7,6 +7,8 @@
           <tr>
             <th>Activo Fijo</th>
             <th>Tipo Equipo</th>
+            <th>Propietario</th>
+            <th>Unidad Organizacional</th>
             <th>Marca</th>
             <th>Observaciones</th>
             <th>Editar</th>
@@ -19,7 +21,9 @@
             <td>{{equipo.serieActivoFijo}}</td>
             <td>{{equipo.tipoEquipo}}</td>
             <td>{{equipo.marca}}</td>
-            <td>{{equipo.Observaciones}}</td>
+            <td>{{equipo.propietario}}</td>
+            <td>{{equipo.unidadOrg}}</td>
+            <td>{{equipo.observaciones}}</td>
             
             <td><button class="btn btn-secondary btn-sm" [routerLink]="['/equipos/form',equipo.id]">Editar</button></td>
             <td><button class="btn btn-danger btn-sm" (click)="eliminar(equipo)">Eliminar</button></td>

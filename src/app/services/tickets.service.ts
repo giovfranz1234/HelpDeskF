@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TicketsService {
-  private baseEndpoint='http://localhost:8090/HelpDesk/tickets';
+  private baseEndpoint='http://localhost:8090/tickets';
 
   private cabecera: HttpHeaders= new HttpHeaders({'Content-Type':'Application/json'})
   constructor(private http:HttpClient) { this.http=http }

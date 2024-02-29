@@ -16,6 +16,7 @@ import { TicketsService } from 'src/app/services/tickets.service';
 
 export class TicketsComponent implements OnInit{
     titulo ='Listado de Tickets';
+    volver =false;
     tickets: Ticket[]=[];
     constructor(private service:TicketsService) {
 
@@ -25,13 +26,13 @@ export class TicketsComponent implements OnInit{
 
       console.log(this.tickets);
     }
-   /* public eliminar(ticket:Ticket):void{
+   public eliminar(ticket:Ticket):void{
       if(confirm(`seguro que desea eliminar el usuario?`))
       this.service.eliminar(ticket.id).subscribe(()=> {
     this.tickets= this.tickets.filter(a=>a!==ticket);
     alert(`Usuario eliminado `)
-    })*/
+    })
 
 
     }
-
+}

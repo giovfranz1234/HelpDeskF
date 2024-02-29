@@ -6,16 +6,16 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="equipos">Activo Fijo</label>
+                        <label for="serieActivoFijo">Activo Fijo</label>
                         <input type="text" name="serieActivoFijo" class="form-control"
                         [(ngModel)]="equipo.serieActivoFijo">
                     </div>
-                </div>w
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="paterno">Apellido Paterno</label>
+                        <label for="tipoEquipo">Tipo Equipo</label>
                         <input type="text" name="materno" class="form-control"[(ngModel)]="equipo.tipoEquipo">
                     </div>
                 </div>
@@ -23,12 +23,35 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="materno">Apellido Materno</label>
+                        <label for="propietario">Propietario</label>
+                        <input type="text" name="paterno" class="form-control" [(ngModel)]="equipo.propietario">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="unidadOrg">Unidad Organizacional</label>
+                        <input type="text" name="paterno" class="form-control" [(ngModel)]="equipo.unidadOrg">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
                         <input type="text" name="paterno" class="form-control" [(ngModel)]="equipo.marca">
                     </div>
                 </div>
             </div>
-          
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Observaciones">Observaciones</label>
+                        <input type="text" name="paterno" class="form-control" [(ngModel)]="equipo.observaciones">
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                        
                 <button type ="button"  class="btn btn-primary" (click)="equipo.id? editar(): crear()">{{equipo.id? 'Editar': 'Guardar'}}</button>

@@ -9,7 +9,7 @@ export class Ticket {
     fechaRegistro: Date=new Date();
     fechaInicio:Date= new Date();
     fechaFin:Date= new Date();
-    Historial:number=0;
+    historial:number=0;
     estado: string="";
        
     constructor(){}
