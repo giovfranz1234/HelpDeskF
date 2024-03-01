@@ -1,6 +1,14 @@
-.canvas{
-    display: initial;
-    
-    height: 250px;
-    width: 250px;
+.contenedor{
+    display: flex;
 }
+.grafico1{
+       
+    height: 350px;
+    width: 350px;
+}
+.grafico1{
+       
+    height: 350px;
+    width: 350px;
+}
+

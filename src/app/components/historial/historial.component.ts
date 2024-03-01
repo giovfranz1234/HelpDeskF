@@ -10,11 +10,11 @@ import Chart from 'chart.js/auto';
 })
 export class HistorialComponent {
   chartBar: any;
-
+  chartline:any;
   constructor(private ticketService: TicketsService) {
 
   }
-  ngOnInit(): void { this.armarGrafico() }
+  ngOnInit(): void { this.armarGrafico(), this.armarlinetime()}
 
 
 
@@ -27,7 +27,29 @@ export class HistorialComponent {
   armarGrafico() {
     
     this.chartBar = new Chart('canvas-bar',{
-      type:'line',//'bar',//'doughnut',
+      type:'doughnut',//'bar',//'doughnut',
+     data : {
+      labels: [
+        'Red',
+        'Blue',
+        'Yellow'
+      ],
+      datasets: [{
+        label: 'My First Dataset',
+        data: [300, 150, 100],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ],
+       
+      }]
+    }});
+  }
+  armarlinetime() {
+    
+    this.chartline = new Chart('canvas-line',{
+      type:'bar',//'bar',//'doughnut',
      data : {
       labels: [
         'Red',
