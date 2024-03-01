@@ -21,6 +21,7 @@ import { HistorialComponent } from './components/historial/historial.component';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 
+
 /*function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
       keycloak.init({
@@ -69,7 +70,9 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
         ReactiveFormsModule,
         MatStepperModule,
         MatButtonModule,
-        KeycloakAngularModule
+        KeycloakAngularModule,
+        
+
     ]
 })
 export class AppModule { }

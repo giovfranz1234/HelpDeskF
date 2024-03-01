@@ -11,3 +11,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 app-root{
     margin-left: 20px;
 }
+.canvas{
+  display: block;
+  
+  height: 10%;
+  width: 10%;
+}

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TicketsService {
+  
   private baseEndpoint='http://localhost:8090/tickets';
 
   private cabecera: HttpHeaders= new HttpHeaders({'Content-Type':'Application/json'})
@@ -31,4 +32,8 @@ export class TicketsService {
   public eliminar(id:number): Observable<void>{
     return this.http.delete<void>(`${this.baseEndpoint}/${id}`);
   }
+  public mostrarGrafico():Observable<Ticket[]>{
+    return this.http.get<Ticket[]>(this.baseEndpoint);
+  }
+
   }
