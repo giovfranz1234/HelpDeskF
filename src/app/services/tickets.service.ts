@@ -35,5 +35,9 @@ export class TicketsService {
   public mostrarGrafico():Observable<Ticket[]>{
     return this.http.get<Ticket[]>(this.baseEndpoint);
   }
-
+  public generaPdf(){
+    console.log ('aqui=====>',this.baseEndpoint+'/exportpdf');
+    return this.http.get(this.baseEndpoint+'/exportpdf',{responseType:'blob'});
   }
+  }
+  

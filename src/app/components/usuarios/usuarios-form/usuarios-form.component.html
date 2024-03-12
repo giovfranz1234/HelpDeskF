@@ -1,10 +1,11 @@
-<div class="card bg-light mb-3">
+<div class="card bg-light mb-3 w-75">
     <div class="card-header">{{titulo}}</div>
-    <div class="card-body">
-        <button class="btn btn-secondary my-2" routerLink="/usuarios">volver</button>
+    <div class="card-body  ">
+        <button class="btn btn-secondary my-2 " routerLink="/usuarios">volver</button>
+        
         <form>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-75">
                     <div class="form-group">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" class="form-control"
@@ -13,7 +14,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-75">
                     <div class="form-group">
                         <label for="paterno">Apellido Paterno</label>
                         <input type="text" name="materno" class="form-control"[(ngModel)]="usuario.paterno">
@@ -21,7 +22,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-75" >
                     <div class="form-group">
                         <label for="materno">Apellido Materno</label>
                         <input type="text" name="paterno" class="form-control" [(ngModel)]="usuario.materno">
@@ -29,7 +30,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-70 h-2">
                     <div class="form-group">
                         <label for="correoElectronico">Email</label>
                         <input type="text" name="correoElectronico" class="form-control" [(ngModel)]="usuario.correoElectronico">
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-70">
                     <div class="form-group">
                         <label for="docIdentidad">Documento de Identidad</label>
                         <input type="text" name="docIdentidad" class="form-control" [(ngModel)]="usuario.docIdentidad">
@@ -45,7 +46,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 w-70  ">
                     <div class="form-group">
                         <label for="telefono">Numero de Telefono</label>
                         <input type="text" name="telefono" class="form-control" [(ngModel)]="usuario.telefono">

@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'equipos/form/:id',component: EquiposRegComponent},
   {path: 'usuarios/form/:id',component: UsuariosFormComponent},
   {path: 'tickets',component: TicketsComponent},
-  {path: 'equipos',component: EquiposComponent},
+    {path: 'equipos',component: EquiposComponent},
   {path: 'historial',component: HistorialComponent},
   {path: 'combo',component: ComboComponent}
 ];

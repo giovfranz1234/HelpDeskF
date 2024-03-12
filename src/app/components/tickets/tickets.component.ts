@@ -5,6 +5,7 @@ import {Ticket} from "../../models/ticket";
 import { TicketsService } from 'src/app/services/tickets.service';
 
 
+
 /**
  * @title Stepper lazy content rendering
  */
@@ -32,7 +33,19 @@ export class TicketsComponent implements OnInit{
     this.tickets= this.tickets.filter(a=>a!==ticket);
     alert(`Usuario eliminado `)
     })
+  }
+   public getPdf(){
+       this.service.generaPdf().subscribe(data=>{    
+        let blob= window.URL.createObjectURL(data);               
+        let link=document.createElement('a');
+        link.href=blob
+        link.download="reporteTickets.pdf";
+        link.click();
 
-
+       })
+       
     }
+
+
+   
 }
