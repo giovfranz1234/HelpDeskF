@@ -1,0 +1,15 @@
+<div mat-dialog-content>
+    <p>ID: {{ data.id }}</p>
+    <p>Serie Activo Fijo: {{ data.serieActivoFijo }}</p>
+    <p>Tipo de Equipo: {{ data.tipoEquipo }}</p>
+    <p>Propietario: {{ data.propietario }}</p>
+    <p>Unidad Organizacional: {{ data.unidadOrganizacional }}</p>
+    <p>Marca: {{ data.marca }}</p>
+    <p>Observaciones: {{ data.observaciones }}</p>
+
+  </div>
+  <div mat-dialog-actions>
+    
+    <button mat-button [mat-dialog-close]="data.id" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+  </div>

@@ -31,4 +31,7 @@ export class EquipoService {
   public eliminar(id:number): Observable<void>{
     return this.http.delete<void>(`${this.baseEndpoint}/${id}`);
   }
+  public obtActfijo (activoFijo:string): Observable<Equipo>{
+    return this.http.get<Equipo>(`${this.baseEndpoint}/actFijo/${activoFijo}`);
+  }
 }

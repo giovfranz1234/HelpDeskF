@@ -20,9 +20,12 @@ import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-re
 import { HistorialComponent } from './components/historial/historial.component';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { BusquedaComponent } from './components/comun/busqueda/busqueda.component';
+import { EquipoDialogComponent } from './components/comun/equipo-dialog/equipo-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
-/*function initializeKeycloak(keycloak: KeycloakService) {
+function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
       keycloak.init({
         config: {
@@ -38,7 +41,7 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
         },
         loadUserProfileAtStartUp:true
       });
-  }*/
+  }
 @NgModule({
     declarations: [
         AppComponent,
@@ -49,14 +52,16 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
         ComboComponent,
         TicketsRegComponent,
         HistorialComponent,
-        EquiposRegComponent
+        EquiposRegComponent,
+        BusquedaComponent,
+        EquipoDialogComponent
     ],
-    providers: [/*{
-        /*provide: APP_INITIALIZER,
+        providers: [{
+        provide: APP_INITIALIZER,
         useFactory: initializeKeycloak,
         multi: true,
         deps: [KeycloakService]
-      }*/],
+      }],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -71,7 +76,7 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
         MatStepperModule,
         MatButtonModule,
         KeycloakAngularModule,
-        
+        MatDialogModule
 
     ]
 })
