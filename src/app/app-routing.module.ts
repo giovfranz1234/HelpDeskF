@@ -6,7 +6,7 @@ import {EquiposComponent} from "./components/equipos/equipos.component";
 import {TicketsComponent} from "./components/tickets/tickets.component";
 import { UsuariosFormComponent } from './components/usuarios/usuarios-form/usuarios-form.component';
 import { ComboComponent } from './components/comun/combo/combo.component';
-import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
+import { TicketsRegComponent } from './components/tickets/tickets-reg/TicketsRegComponent';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { HistorialComponent } from './components/historial/historial.component';
 

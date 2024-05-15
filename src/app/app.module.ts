@@ -16,7 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
-import { TicketsRegComponent } from './components/tickets/tickets-reg/tickets-reg.component';
+import { TicketsRegComponent } from './components/tickets/tickets-reg/TicketsRegComponent';
 import { HistorialComponent } from './components/historial/historial.component';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
