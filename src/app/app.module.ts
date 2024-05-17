@@ -25,7 +25,7 @@ import { EquipoDialogComponent } from './components/comun/equipo-dialog/equipo-d
 import { MatDialogModule } from '@angular/material/dialog';
 
 
-function initializeKeycloak(keycloak: KeycloakService) {
+/*function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
       keycloak.init({
         config: {
@@ -41,7 +41,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
         },
         loadUserProfileAtStartUp:true
       });
-  }
+  }*/
 @NgModule({
     declarations: [
         AppComponent,
@@ -56,12 +56,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
         BusquedaComponent,
         EquipoDialogComponent
     ],
-        providers: [{
+        providers: [/*{
         provide: APP_INITIALIZER,
-        useFactory: initializeKeycloak,
+        /*useFactory: initializeKeycloak,
         multi: true,
         deps: [KeycloakService]
-      }],
+      }*/],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,

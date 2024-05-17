@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 
 import { EquipoService } from 'src/app/services/equipo.service';
 import { EquipoDialogComponent } from '../equipo-dialog/equipo-dialog.component';
+import { Equipo } from 'src/app/models/equipo';
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.component.html',
@@ -12,15 +13,20 @@ import { EquipoDialogComponent } from '../equipo-dialog/equipo-dialog.component'
 
 export class BusquedaComponent {
   activoFijo: string='';
-  equipoData: any;
-
+  equipoData: any ;
+  @Output() equipoDato= new EventEmitter<Equipo>();
   constructor(private dialog: MatDialog, private equipoService: EquipoService) { }
 
   buscarEquipo() {
     this.equipoService.obtActfijo(this.activoFijo).subscribe(data => {
       this.equipoData = data;
-      this.openDialog();
+            this.openDialog();
+            console.log('probemos este',this.equipoData)
+            this.equipoDato.emit(this.equipoData);
     });
+    //this.equipoDato.emit(this.equipoData);
+
+    //console.log('datosorigenbusqueda',this.equipoDato);
   }
 
   openDialog() {
@@ -44,7 +50,7 @@ export class BusquedaComponent {
         data: this.equipoData
       });*/
     }
-    
-    
-  
+
+
+
 }

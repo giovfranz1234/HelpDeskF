@@ -3,8 +3,31 @@
       <ng-template matStepLabel>Registro Equipos</ng-template>
       <ng-template matStepContent>
         <p>Realice la busqueda del equipo o realize el registro</p>
-        <app-busqueda></app-busqueda>
-        
+        <app-busqueda (equipoDato)="equipoDato= $event"></app-busqueda>
+        <table *ngIf="equipoDato" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Activo Fijo</th>
+              <th>Tipo de Equipo</th>
+              <th>Propietario</th>
+              <th>Unidad Organizacional</th>
+              <th>Marca</th>
+              <th>Observaciones</th>
+
+            </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td>{{equipoDato.serieActivoFijo}}</td>
+                <td>{{equipoDato.tipoEquipo}}</td>
+                <td>{{equipoDato.propietario}}</td>
+                <td>{{equipoDato.unidadOrg}}</td>
+                <td>{{equipoDato.marca}}</td>
+                <td>{{equipoDato.observaciones}}</td>
+                 </tr>
+            </tbody>
+        </table>
+
         <button mat-button matStepperNext>Next</button>
       </ng-template>
     </mat-step>
