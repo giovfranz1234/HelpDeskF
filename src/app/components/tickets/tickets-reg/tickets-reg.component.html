@@ -35,13 +35,33 @@
       <ng-template matStepLabel>Registro Ticket</ng-template>
       <ng-template matStepContent>
         <p>Registre los datos del Ticket</p>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+      <form>
+        <div class="row">
+            <div class="col-md-4 w-75">
+                <div class="form-group">
+                    <label for="descripcion">Descripcion de Problema</label>
+                    <input type="text" name="descripcion" class="form-control"
+                    [(ngModel)]="ticket.descripcion">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 w-75">
+                <div class="form-group">
+                    <label for="prioridad">Prioridad</label>
+                    <input type="text" name="prioridad" class="form-control"
+                    [(ngModel)]="ticket.prioridad">>
+                </div>
+            </div>
+        </div>
+       
+    </form>
+     
+        <div class="form-group">
+                       
+          <button type ="button"  class="btn btn-primary" (click)="ticket.id? editar(): crear()">{{equipoDato.id? 'Editar': 'Guardar'}}</button>
+      </div>
       </ng-template>
     </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Asignacion ticket</ng-template>
-      <p>Asigne el ticket generado a un tecnico.</p>
-      <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
+   
   </mat-stepper>

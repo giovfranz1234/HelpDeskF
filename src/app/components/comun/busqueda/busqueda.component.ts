@@ -14,7 +14,7 @@ import { Equipo } from 'src/app/models/equipo';
 export class BusquedaComponent {
   activoFijo: string='';
   equipoData: any ;
-  @Output() equipoDato= new EventEmitter<Equipo>();
+  @Output() equipoDato= new EventEmitter<any>();
   constructor(private dialog: MatDialog, private equipoService: EquipoService) { }
 
   buscarEquipo() {
