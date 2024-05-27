@@ -17,12 +17,13 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
 import { TicketsRegComponent } from './components/tickets/tickets-reg/TicketsRegComponent';
-import { HistorialComponent } from './components/historial/historial.component';
+import { HistorialComponent } from './components/historial/HistorialComponent';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { BusquedaComponent } from './components/comun/busqueda/busqueda.component';
 import { EquipoDialogComponent } from './components/comun/equipo-dialog/equipo-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
 
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
@@ -56,12 +57,12 @@ import { MatDialogModule } from '@angular/material/dialog';
         BusquedaComponent,
         EquipoDialogComponent
     ],
-        providers: [/*{
+       /* providers: [{
         provide: APP_INITIALIZER,
-        /*useFactory: initializeKeycloak,
+        useFactory: initializeKeycloak,
         multi: true,
         deps: [KeycloakService]
-      }*/],
+      }],*/
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -76,7 +77,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatStepperModule,
         MatButtonModule,
         KeycloakAngularModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTableModule
 
     ]
 })

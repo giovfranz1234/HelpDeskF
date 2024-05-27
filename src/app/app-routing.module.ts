@@ -8,7 +8,7 @@ import { UsuariosFormComponent } from './components/usuarios/usuarios-form/usuar
 import { ComboComponent } from './components/comun/combo/combo.component';
 import { TicketsRegComponent } from './components/tickets/tickets-reg/TicketsRegComponent';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
-import { HistorialComponent } from './components/historial/historial.component';
+import { HistorialComponent } from './components/historial/HistorialComponent';
 
 const routes: Routes = [
   {path: '',pathMatch: 'full', redirectTo:'usuarios'},

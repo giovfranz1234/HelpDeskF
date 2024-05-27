@@ -1,14 +1,15 @@
 .contenedor{
-    display: flex;
+    display: flex
+     center
 }
 .grafico1{
        
     height: 350px;
     width: 350px;
 }
-.grafico1{
+.grafico2{
        
-    height: 350px;
-    width: 350px;
+    height: 500px;
+    width: 500px;
 }
 

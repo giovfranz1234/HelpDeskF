@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Ticket } from '../models/ticket';
 import { Observable } from 'rxjs';
+import { Grafico } from '../models/grafico';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,9 @@ export class TicketsService {
   public generaPdf(){
     console.log ('aqui=====>',this.baseEndpoint+'/exportpdf');
     return this.http.get(this.baseEndpoint+'/exportpdf',{responseType:'blob'});
+  }
+  public graficos(){
+    return this.http.get<Grafico[]>(this.baseEndpoint+'/Grafico',{headers:this.cabecera})
   }
   }
 

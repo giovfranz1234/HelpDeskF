@@ -2,9 +2,20 @@
   <div class="card-header">{{titulo}}</div>
   <div class="card-body">
     <button class="btn btn-primary my-2" routerLink="/usuarios/form">Crear Usuario</button>
+    
     <table class="table table-hover table-striped">
       <thead>
         <tr>
+          <th><input type="text" placeholder="Buscar por Nombre" [(ngModel)]="filtroNombre" /></th>
+          <th><input type="text" placeholder="Buscar por Apellido" [(ngModel)]="filtroApellido" /></th>
+          <th><input type="text" placeholder="Buscar por Apellido" [(ngModel)]="filtroMaterno" /></th>
+          <th><input type="text" placeholder="Buscar por Ci" [(ngModel)]="filtroDocIdentidad" /></th>
+         
+          
+          
+        </tr>
+        <tr>
+          
           <th>Nombres</th>
           <th>Apellido Paterno</th>
           <th>Apellido Materno</th>
@@ -19,7 +30,7 @@
 
       </thead>
       <tbody>
-        <tr *ngFor="let usuario of usuarios">
+        <tr *ngFor="let usuario of filteredItems">
           <td>{{usuario.nombres}}</td>
           <td>{{usuario.paterno}}</td>
           <td>{{usuario.materno}}</td>

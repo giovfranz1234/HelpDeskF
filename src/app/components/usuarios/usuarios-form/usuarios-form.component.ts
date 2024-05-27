@@ -31,6 +31,7 @@ export class UsuariosFormComponent implements OnInit{
   }
   public crear():void{
     this.service.crear(this.usuario).subscribe(usuario => {
+      this.usuario.estado ='AC';
       console.log(usuario);
       alert (`Usuario ${usuario.nombres} ${usuario.paterno} creado correctamente`);
       this.router.navigate(['/usuarios'])
