@@ -9,6 +9,8 @@ import { ComboComponent } from './components/comun/combo/combo.component';
 import { TicketsRegComponent } from './components/tickets/tickets-reg/TicketsRegComponent';
 import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-reg.component';
 import { HistorialComponent } from './components/historial/HistorialComponent';
+import { TicketAsignacionComponent } from './components/ticket-asignacion/ticket-asignacion.component';
+import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.component';
 
 const routes: Routes = [
   {path: '',pathMatch: 'full', redirectTo:'usuarios'},
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'tickets',component: TicketsComponent},
     {path: 'equipos',component: EquiposComponent},
   {path: 'historial',component: HistorialComponent},
-  {path: 'combo',component: ComboComponent}
+  {path: 'combo',component: ComboComponent},
+  {path: 'tickets/asignacion',component: TicketAsignacionComponent},
+  {path: 'tickets/cierre',component: TicketCierreComponent}
 ];
 
 @NgModule({

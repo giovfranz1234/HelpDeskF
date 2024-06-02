@@ -24,6 +24,10 @@ import { BusquedaComponent } from './components/comun/busqueda/busqueda.componen
 import { EquipoDialogComponent } from './components/comun/equipo-dialog/equipo-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { TicketAsignacionComponent } from './components/ticket-asignacion/ticket-asignacion.component';
+import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.component';
+import { AsignacionRegComponent } from './components/ticket-asignacion/asignacion-reg/asignacion-reg.component';
+import { CierreRegComponent } from './components/ticket-cierre/cierre-reg/cierre-reg.component';
 
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
@@ -55,7 +59,11 @@ import { MatTableModule } from '@angular/material/table';
         HistorialComponent,
         EquiposRegComponent,
         BusquedaComponent,
-        EquipoDialogComponent
+        EquipoDialogComponent,
+        TicketAsignacionComponent,
+        TicketCierreComponent,
+        AsignacionRegComponent,
+        CierreRegComponent
     ],
        /* providers: [{
         provide: APP_INITIALIZER,

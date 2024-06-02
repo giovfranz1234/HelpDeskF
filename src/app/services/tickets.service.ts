@@ -17,6 +17,13 @@ export class TicketsService {
   public listar():Observable<Ticket[]>{
     return this.http.get<Ticket[]>(this.baseEndpoint);
   }
+
+  public listarAs():Observable<Ticket[]>{
+    return this.http.get<Ticket[]>(this.baseEndpoint+'/asigna');
+  }
+  public listarcierre():Observable<Ticket[]>{
+    return this.http.get<Ticket[]>(this.baseEndpoint+'/asigna');
+  }
   public crear(ticket:Ticket): Observable<Ticket>{
     return this.http.post<Ticket>(this.baseEndpoint,ticket,{headers:this.cabecera});
   }
