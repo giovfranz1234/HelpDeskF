@@ -1,12 +1,14 @@
 
 export class Usuario {
-    id: number=0;
+    id: number;
     nombres: string="";
     paterno: string="";
     materno: string="";
     docIdentidad: string="";
     correoElectronico: string="";
     telefono: string="";
+    login: string="";
+    password:string="";
     rol: string="";
     estado: string="";
     

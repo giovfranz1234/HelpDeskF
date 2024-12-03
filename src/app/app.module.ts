@@ -28,7 +28,7 @@ import { TicketAsignacionComponent } from './components/ticket-asignacion/ticket
 import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.component';
 import { AsignacionRegComponent } from './components/ticket-asignacion/asignacion-reg/asignacion-reg.component';
 import { CierreRegComponent } from './components/ticket-cierre/cierre-reg/cierre-reg.component';
-
+import { AuthComponent } from './components/auth/auth.component';
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
@@ -63,7 +63,8 @@ import { CierreRegComponent } from './components/ticket-cierre/cierre-reg/cierre
         TicketAsignacionComponent,
         TicketCierreComponent,
         AsignacionRegComponent,
-        CierreRegComponent
+        CierreRegComponent,
+        AuthComponent
     ],
        /* providers: [{
         provide: APP_INITIALIZER,
@@ -90,4 +91,6 @@ import { CierreRegComponent } from './components/ticket-cierre/cierre-reg/cierre
 
     ]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

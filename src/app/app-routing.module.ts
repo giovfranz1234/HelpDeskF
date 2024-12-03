@@ -11,9 +11,10 @@ import { EquiposRegComponent } from './components/equipos/equipos-reg/equipos-re
 import { HistorialComponent } from './components/historial/HistorialComponent';
 import { TicketAsignacionComponent } from './components/ticket-asignacion/ticket-asignacion.component';
 import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.component';
-
+import { AuthComponent } from './components/auth/auth.component';
+import { Forbidden403Component } from './components/forbidden403/forbidden403.component';
 const routes: Routes = [
-  {path: '',pathMatch: 'full', redirectTo:'usuarios'},
+  {path: '',pathMatch: 'full', redirectTo:'login'},
   {path: 'usuarios',component: UsuariosComponent},
   {path: 'usuarios/form',component: UsuariosFormComponent},
   {path: 'tickets/reg',component: TicketsRegComponent},
@@ -26,7 +27,12 @@ const routes: Routes = [
   {path: 'historial',component: HistorialComponent},
   {path: 'combo',component: ComboComponent},
   {path: 'tickets/asignacion',component: TicketAsignacionComponent},
-  {path: 'tickets/cierre',component: TicketCierreComponent}
+  {path: 'tickets/cierre',component: TicketCierreComponent},
+  {path: 'login', component: AuthComponent},
+    {
+        path: 'forbidden',
+        component: Forbidden403Component
+    }
 ];
 
 @NgModule({
