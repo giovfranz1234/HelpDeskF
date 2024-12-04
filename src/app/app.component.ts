@@ -36,16 +36,17 @@ export class AppComponent {
     this.handlerLogin();
   }
   handlerLogin() {
-    this.sharingData.handlerLoginEventEmitter.subscribe(({ username, password }) => {
-      console.log(username + ' ' + password);
+    this.sharingData.handlerLoginEventEmitter.subscribe(({ login, password }) => {
+      console.log(login + ' ' + password);
+      console.log('asdasdasd=======>', login);
 
-      this.authService.loginUser({ username, password }).subscribe({
+      this.authService.loginUser({ login, password }).subscribe({
         next: response => {
           const token = response.token;
           console.log(token);
           const payload = this.authService.getPayload(token);
 
-          const user = { username: payload.sub };
+          const user = { login: payload.sub };
           const login = {
             user,
             isAuth: true,
@@ -54,10 +55,12 @@ export class AppComponent {
           
           this.authService.token = token;
           this.authService.user = login;
-          this.router.navigate(['/users/page/0']);
+          this.router.navigate(['/usuarios']);
         },
         error: error => {
+          console.log('error',error);
           if (error.status == 401) {
+
             Swal.fire('Error en el Login', error.error.message, 'error')
           } else {
             throw error;

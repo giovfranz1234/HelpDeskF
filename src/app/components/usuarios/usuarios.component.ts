@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsuarioService} from "../../services/usuario.service";
 import {Usuario} from "../../models/usuario";
 import { MatTableDataSource } from '@angular/material/table';
-
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -16,7 +16,8 @@ export class UsuariosComponent implements OnInit{
     filtroMaterno:String='';
     filtroDocIdentidad:String='';
     
-    constructor(private service:UsuarioService) {
+    constructor(private service:UsuarioService,
+                private authService: AuthService    ) {
 
       }
       get filteredItems(): Usuario[] {
@@ -46,6 +47,9 @@ export class UsuariosComponent implements OnInit{
     alert(`Usuario eliminado `)
     })
    
+    }
+    get admin(){
+       return this.authService.isAdmin();
     }
     
 

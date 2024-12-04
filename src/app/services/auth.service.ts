@@ -13,12 +13,13 @@ export class AuthService {
   private _user: any = {
     isAuth: false,
     isAdmin: false,
-    user: undefined
+    user: undefined,
   }
 
   constructor(private http: HttpClient) { }
 
   loginUser({ login, password }: any): Observable<any>{
+    console.log('====+++++++++++'+login,password);
     return this.http.post<any>(this.url, { login, password });
   }
 
@@ -60,6 +61,7 @@ export class AuthService {
   }
 
   isAdmin() {
+    console.log('verificando usuario admin',this.user.isAdmin);
     return this.user.isAdmin;
   }
 

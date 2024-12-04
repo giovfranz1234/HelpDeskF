@@ -24,7 +24,8 @@ export class AuthComponent {
       );
     } else{
       console.log(this.usuario);
-      this.sharingData.handlerLoginEventEmitter.emit({ username: this.usuario.login, password: this.usuario.password });
+      this.sharingData.handlerLoginEventEmitter.emit({ login: this.usuario.login, password: this.usuario.password });
+      console.log(this.usuario.login);
     }
   }
 
