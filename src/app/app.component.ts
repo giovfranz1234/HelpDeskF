@@ -45,7 +45,7 @@ export class AppComponent {
           const token = response.token;
           console.log(token);
           const payload = this.authService.getPayload(token);
-
+          console.log('token',token);
           const user = { login: payload.sub };
           const login = {
             user,

@@ -1,7 +1,7 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
@@ -29,6 +29,8 @@ import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.
 import { AsignacionRegComponent } from './components/ticket-asignacion/asignacion-reg/asignacion-reg.component';
 import { CierreRegComponent } from './components/ticket-cierre/cierre-reg/cierre-reg.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { TokenInterceptor  } from './interceptors/token.interceptor'
+import { Forbidden403Component } from './components/forbidden403/forbidden403.component';
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
@@ -64,7 +66,13 @@ import { AuthComponent } from './components/auth/auth.component';
         TicketCierreComponent,
         AsignacionRegComponent,
         CierreRegComponent,
-        AuthComponent
+        AuthComponent,
+         Forbidden403Component
+    ],
+    providers: [
+      {
+        provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true
+      }
     ],
        /* providers: [{
         provide: APP_INITIALIZER,

@@ -13,6 +13,7 @@ import { TicketAsignacionComponent } from './components/ticket-asignacion/ticket
 import { TicketCierreComponent } from './components/ticket-cierre/ticket-cierre.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { Forbidden403Component } from './components/forbidden403/forbidden403.component';
+import { authGuard } from './guards/auth.guard';
 const routes: Routes = [
   {path: '',pathMatch: 'full', redirectTo:'login'},
   {path: 'usuarios',component: UsuariosComponent},
@@ -22,13 +23,16 @@ const routes: Routes = [
   {path: 'equipos/form',component: EquiposRegComponent},
   {path: 'equipos/form/:id',component: EquiposRegComponent},
   {path: 'usuarios/form/:id',component: UsuariosFormComponent},
-  {path: 'tickets',component: TicketsComponent},
+  {path: 'tickets',component: TicketsComponent,
+    canActivate:[authGuard]
+  },
     {path: 'equipos',component: EquiposComponent},
   {path: 'historial',component: HistorialComponent},
   {path: 'combo',component: ComboComponent},
   {path: 'tickets/asignacion',component: TicketAsignacionComponent},
   {path: 'tickets/cierre',component: TicketCierreComponent},
   {path: 'login', component: AuthComponent},
+  {path: 'forbidden',component: Forbidden403Component },
     {
         path: 'forbidden',
         component: Forbidden403Component
